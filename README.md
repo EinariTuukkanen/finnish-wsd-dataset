@@ -1,6 +1,17 @@
 
+# Background
 
-# Dataset Usage
+The dataset is constructed as a part of a master's thesis by Einari Tuukkanen. A link to the thesis will be provided after it has been approved and published.
+
+The goal of the paper is to provide a purely Finnish dataset for evaluating word sense disambiguation (WSD) or named entity disambiguation (NED) algorithms. The background and the process are described in detail in the paper and only briefly here.
+
+The dataset is based on a dump of Finnish Wikipedia from Jan 9th 2021. The text data was processed through [TurkuNLP NLP pipeline](http://turkunlp.org/Turku-neural-parser-pipeline/) and [NER-tagger](https://turkunlp.org/finnish_nlp.html#fin-ner). Text samples causing errors or sentence segmentation mismatches during these processes were discarded resulting in an incomplete representation of the entire Finnish Wikipedia. 
+
+In addition, [Wikipedia's API](https://fi.wikipedia.org/w/api.php?format=json&action=query&list=querypage&qppage=DisambiguationPages&qpoffset=0) was used to fetch the disambiguation pages. The pages are then used to link all the mentioned disambiguous articles to the ambiguous page title. This results in us having a known list of ambiguous words (disambiguation page titles), known possible senses for each ambiguous word (the links on the disambiguation page), and the sense definitions/example text for each sense (the Wikipedia article). The result can now be used for evaluating WSD/NED solutions.
+
+The processed data is stored in an RDF/TTL format in the dataset file provided by this repository.
+
+# Usage
 
 ## Downloading the Database
 
