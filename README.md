@@ -97,3 +97,7 @@ There are multiple approaches for submitting queries to an RDF database with Pyt
 Note that one should also install [conllu](https://pypi.org/project/conllu/)-package for Python to parse the CoNLL-U formatted data from the database.
 
 Example Python script is provided in the `examples` directory. Examples are tested with Python version 3.10.5.
+
+# Task Sets
+
+The two primary task sets from the thesis are released under `/tasks` directory. Both files come compressed with `bzip2` and `pickle`. Use `bzip2 -dk <filename>` to extract the files, then see an example code for using the files in `examples/example_task.py`.
